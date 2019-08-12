@@ -42,5 +42,10 @@ function listableOptions(yargs) {
       describe: "Show dependency graph as a JSON-formatted adjacency list",
       type: "boolean",
     },
+    excludeDependents: {
+      group: "Command Options:",
+      describe: "Exclude dependents from list",
+      type: "boolean",
+    },
   });
 }

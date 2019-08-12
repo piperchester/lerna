@@ -382,4 +382,6 @@ describe("collectUpdates()", () => {
 
     expect(makeDiffPredicate).toHaveBeenLastCalledWith("v1.0.0", execOpts, ["**/README.md"]);
   });
+
+  it.skip("excludes dependents if --exclude-dependents flag is provided", () => {});
 });

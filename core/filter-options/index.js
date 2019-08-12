@@ -49,6 +49,13 @@ function filterOptions(yargs) {
       `,
       type: "boolean",
     },
+    "exclude-filtered-dependents": {
+      describe: dedent`
+        Exclude all transitive dependents when running a command
+        regardless of --scope, --ignore, or --since.
+      `,
+      type: "boolean",
+    },
   };
 
   return yargs.options(opts).group(Object.keys(opts), "Filter Options:");

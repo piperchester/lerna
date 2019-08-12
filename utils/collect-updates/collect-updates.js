@@ -86,5 +86,6 @@ function collectUpdates(filteredPackages, packageGraph, execOpts, commandOptions
   return collectPackages(packages, {
     isCandidate: (node, name) => isForced(node, name) || needsBump(node) || hasDiff(node),
     onInclude: name => log.verbose("updated", name),
+    excludeDependents: commandOptions.excludeDependents,
   });
 }
